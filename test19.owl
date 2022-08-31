@@ -1,0 +1,3130 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://test.org/onto34.owl"
+         xmlns="http://test.org/onto34.owl#">
+
+<owl:Ontology rdf:about="http://test.org/onto34.owl"/>
+
+<owl:ObjectProperty rdf:about="#useAlgorithm">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Algorithm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#uses">
+  <rdfs:domain rdf:resource="#Task"/>
+  <rdfs:range rdf:resource="#Algorithm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasExample">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Task"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasInput">
+  <rdfs:domain rdf:resource="#Task"/>
+  <rdfs:range rdf:resource="#TaskInput"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#canGetData">
+  <rdfs:domain rdf:resource="#TaskInput"/>
+  <rdfs:range rdf:resource="#DataSet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#canExtract">
+  <rdfs:domain rdf:resource="#TaskInput"/>
+  <rdfs:range rdf:resource="#Feature"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#produce">
+  <rdfs:domain rdf:resource="#Task"/>
+  <rdfs:range rdf:resource="#TaskOutput"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#evaluatedBy">
+  <rdfs:domain rdf:resource="#TaskOutput"/>
+  <rdfs:range rdf:resource="#EvaluationMatric"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#sufferFrom">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Limitation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#solvedBy">
+  <rdfs:domain rdf:resource="#Limitation"/>
+  <rdfs:range rdf:resource="#Algorithm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#learns">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Parameter"/>
+  <rdfs:domain rdf:resource="#Parameter"/>
+  <rdfs:range rdf:resource="#Algorithm"/>
+  <owl:inverseOf rdf:resource="#learns"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasLayer">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Layer"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isPartOf">
+  <rdfs:domain rdf:resource="#Layer"/>
+  <rdfs:range rdf:resource="#Algorithm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasHyperParameter">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#HyperParameter"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#useFunction">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Function"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasModel">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Model"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#useOptimizer">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#OptimizationAlgorithm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#execute">
+  <rdfs:domain rdf:resource="#Algorithm"/>
+  <rdfs:range rdf:resource="#Operator"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#label">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Algorithm">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Task">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TaskInput">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DataSet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Feature">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TaskOutput">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EvaluationMatric">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Limitation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Parameter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Layer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HyperParameter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Function">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Model">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OptimizationAlgorithm">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Operator">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<Algorithm rdf:about="#en_autoencoder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en_autoencoder</label>
+</Algorithm>
+
+<Task rdf:about="#Rnn_autoencoder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rnn_autoencoder</label>
+</Task>
+
+<Task rdf:about="#cnn_autoencoder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cnn_autoencoder</label>
+</Task>
+
+<Task rdf:about="#denoising_autoencoders">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denoising_autoencoders</label>
+</Task>
+
+<Task rdf:about="#dimensionality_reduction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimensionality_reduction</label>
+</Task>
+
+<Task rdf:about="#feature_detectors">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature_detectors</label>
+</Task>
+
+<Task rdf:about="#generative_models">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generative_models</label>
+</Task>
+
+<TaskInput rdf:about="#cnn_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cnn_input</label>
+</TaskInput>
+
+<TaskInput rdf:about="#denosing_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denosing_input</label>
+</TaskInput>
+
+<TaskInput rdf:about="#dimension_reduction_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimension_reduction_input</label>
+</TaskInput>
+
+<TaskInput rdf:about="#feature_detectors_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature_detectors_input</label>
+</TaskInput>
+
+<TaskInput rdf:about="#generative_models_inputs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generative_models_inputs</label>
+</TaskInput>
+
+<TaskInput rdf:about="#rnn_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnn_input</label>
+</TaskInput>
+
+<DataSet rdf:about="#Image_dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image_dataset</label>
+</DataSet>
+
+<DataSet rdf:about="#Sequnce_dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sequnce_dataset</label>
+</DataSet>
+
+<DataSet rdf:about="#number_dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number_dataset</label>
+</DataSet>
+
+<TaskOutput rdf:about="#cnn_autoencoder_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cnn_autoencoder_output</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#denoising_autoencoder_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denoising_autoencoder_output</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#dimensionality_reductuin_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimensionality_reductuin_output</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#feature_detectors_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature_detectors_output</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#generative_models_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generative_models_output</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#rnn_autoencoder_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnn_autoencoder_output</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#loss_metrics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loss_metrics</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#pca_metrics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pca_metrics</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#weight">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</label>
+</Parameter>
+
+<Limitation rdf:about="#limitations">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limitations</label>
+</Limitation>
+
+<Layer rdf:about="#decoder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decoder</label>
+</Layer>
+
+<Layer rdf:about="#encoder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">encoder</label>
+</Layer>
+
+<Task rdf:about="#Masked_Language_Modeling">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masked_Language_Modeling</label>
+</Task>
+
+<Task rdf:about="#Next_Sentence_Prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Next_Sentence_Prediction</label>
+</Task>
+
+<Task rdf:about="#sentence-order_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentence-order_prediction</label>
+</Task>
+
+<TaskInput rdf:about="#Input-level_embeddings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input-level_embeddings</label>
+</TaskInput>
+
+<TaskInput rdf:about="#sentences">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentences</label>
+</TaskInput>
+
+<DataSet rdf:about="#https://arxiv.org/pdf/1810.04805.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://arxiv.org/pdf/1810.04805.pdf</label>
+</DataSet>
+
+<DataSet rdf:about="#https://arxiv.org/pdf/1909.11942.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://arxiv.org/pdf/1909.11942.pdf</label>
+</DataSet>
+
+<Feature rdf:about="#Identifying_stop_words">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifying_stop_words</label>
+</Feature>
+
+<Feature rdf:about="#count_word">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count_word</label>
+</Feature>
+
+<Feature rdf:about="#text">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">text</label>
+</Feature>
+
+<TaskOutput rdf:about="#sequence_of_vectors">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_of_vectors</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#F1_score">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F1_score</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#The_General_Language_Understanding_Evaluation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The_General_Language_Understanding_Evaluation</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#A">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</label>
+</Parameter>
+
+<Parameter rdf:about="#attention_probs_dropout_prob">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attention_probs_dropout_prob</label>
+</Parameter>
+
+<Parameter rdf:about="#embedding_size">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">embedding_size</label>
+</Parameter>
+
+<Parameter rdf:about="#hidden_act">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hidden_act</label>
+</Parameter>
+
+<Parameter rdf:about="#hidden_dropout_prob">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hidden_dropout_prob</label>
+</Parameter>
+
+<Parameter rdf:about="#hidden_size">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hidden_size</label>
+</Parameter>
+
+<Parameter rdf:about="#intermediate_size">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intermediate_size</label>
+</Parameter>
+
+<Parameter rdf:about="#num_hidden_groups">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num_hidden_groups</label>
+</Parameter>
+
+<Parameter rdf:about="#H">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</label>
+</Parameter>
+
+<Parameter rdf:about="#L">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</label>
+</Parameter>
+
+<Parameter rdf:about="#num_attention_heads">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num_attention_heads</label>
+</Parameter>
+
+<Parameter rdf:about="#vocab_size">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vocab_size</label>
+</Parameter>
+
+<Limitation rdf:about="#limit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limit</label>
+</Limitation>
+
+<Layer rdf:about="#cross_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross_layer</label>
+</Layer>
+
+<Layer rdf:about="#Pooler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pooler</label>
+</Layer>
+
+<Layer rdf:about="#embedding">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">embedding</label>
+</Layer>
+
+<Layer rdf:about="#transformer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transformer</label>
+</Layer>
+
+<Limitation rdf:about="#bias">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bias</label>
+</Limitation>
+
+<Limitation rdf:about="#variance">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variance</label>
+</Limitation>
+
+<Limitation rdf:about="#overfiting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overfiting</label>
+</Limitation>
+
+<Algorithm rdf:about="#DBSCAN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBSCAN</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Optics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optics</label>
+</Algorithm>
+
+<Algorithm rdf:about="#The_first_step">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The_first_step</label>
+</Algorithm>
+
+<Algorithm rdf:about="#The_second_step">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The_second_step</label>
+</Algorithm>
+
+<Algorithm rdf:about="#The_third_step">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The_third_step</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Eps">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eps</label>
+</Algorithm>
+
+<Algorithm rdf:about="#K">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</label>
+</Algorithm>
+
+<Algorithm rdf:about="#MinPts">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MinPts</label>
+</Algorithm>
+
+<Algorithm rdf:about="#ε">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ε</label>
+</Algorithm>
+
+<Task rdf:about="#House_price">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House_price</label>
+</Task>
+
+<Task rdf:about="#Mall_Customers">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mall_Customers</label>
+</Task>
+
+<Task rdf:about="#Werther_Stations">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Werther_Stations</label>
+</Task>
+
+<Task rdf:about="#generate_a_cluster_ordering_of_points_using_OPTICS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generate_a_cluster_ordering_of_points_using_OPTICS</label>
+</Task>
+
+<Task rdf:about="#Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input</label>
+</Task>
+
+<Task rdf:about="#Input0.1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input0.1</label>
+</Task>
+
+<Task rdf:about="#Input1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input1</label>
+</Task>
+
+<Task rdf:about="#Input1.1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input1.1</label>
+</Task>
+
+<Task rdf:about="#Input2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input2</label>
+</Task>
+
+<Task rdf:about="#Input3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Input3</label>
+</Task>
+
+<Task rdf:about="#Output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output</label>
+</Task>
+
+<Task rdf:about="#Output0.1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output0.1</label>
+</Task>
+
+<Task rdf:about="#Output1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output1</label>
+</Task>
+
+<Task rdf:about="#Output1.1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output1.1</label>
+</Task>
+
+<Task rdf:about="#Output3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output3</label>
+</Task>
+
+<Task rdf:about="#output2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">output2</label>
+</Task>
+
+<Task rdf:about="#Mall_Customers.csv">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mall_Customers.csv</label>
+</Task>
+
+<Task rdf:about="#Real_estate.csv">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real_estate.csv</label>
+</Task>
+
+<Task rdf:about="#weather-stations20140101-20141231.csv">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weather-stations20140101-20141231.csv</label>
+</Task>
+
+<Limitation rdf:about="#limitation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limitation</label>
+</Limitation>
+
+<Limitation rdf:about="#limtation_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limtation_1</label>
+</Limitation>
+
+<Limitation rdf:about="#transformers_limtation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transformers_limtation</label>
+</Limitation>
+
+<Algorithm rdf:about="#Energy-Based">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy-Based</label>
+</Algorithm>
+
+<Task rdf:about="#Face-Detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face-Detection</label>
+</Task>
+
+<TaskInput rdf:about="#Face-Detection-Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face-Detection-Input</label>
+</TaskInput>
+
+<DataSet rdf:about="#Face-Detection_Dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face-Detection_Dataset</label>
+</DataSet>
+
+<TaskOutput rdf:about="#Face-Detection_Output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face-Detection_Output</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#Face-Detection_EvaluationMetric">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Face-Detection_EvaluationMetric</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#Energy-Based_Parameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy-Based_Parameter</label>
+</Parameter>
+
+<Limitation rdf:about="#Energy-Based_Limitation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy-Based_Limitation</label>
+</Limitation>
+
+<Limitation rdf:about="#Energy-Based_Solved-Limitation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy-Based_Solved-Limitation</label>
+</Limitation>
+
+<Algorithm rdf:about="#Exponential_Smoothing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exponential_Smoothing</label>
+</Algorithm>
+
+<Task rdf:about="#Time_Series_Forecasting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time_Series_Forecasting</label>
+</Task>
+
+<TaskInput rdf:about="#Forecasting_Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forecasting_Input</label>
+</TaskInput>
+
+<TaskInput rdf:about="#Shampoo_Sales_Dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shampoo_Sales_Dataset</label>
+</TaskInput>
+
+<TaskInput rdf:about="#data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</label>
+</TaskInput>
+
+<TaskOutput rdf:about="#Exponential_Smoothin_Output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exponential_Smoothin_Output</label>
+</TaskOutput>
+
+<Algorithm rdf:about="#CNN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNN</label>
+</Algorithm>
+
+<Algorithm rdf:about="#FastRCNN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLayer rdf:resource="#FullyConnectedLayer"/>
+  <hasLayer rdf:resource="#RegressionLayer"/>
+  <hasLayer rdf:resource="#ClassificationLayer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FastRCNN</label>
+</Algorithm>
+
+<Layer rdf:about="#ClassificationLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClassificationLayer</label>
+</Layer>
+
+<Layer rdf:about="#FullyConnectedLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FullyConnectedLayer</label>
+</Layer>
+
+<Layer rdf:about="#RegressionLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RegressionLayer</label>
+</Layer>
+
+<Algorithm rdf:about="#FasterRCNN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLayer rdf:resource="#ROIPooling"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FasterRCNN</label>
+</Algorithm>
+
+<Layer rdf:about="#ROIPooling">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROIPooling</label>
+</Layer>
+
+<Algorithm rdf:about="#RegionProposalNetwork">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLayer rdf:resource="#FullyConnectedLayer"/>
+  <hasLayer rdf:resource="#RegressionLayer"/>
+  <hasLayer rdf:resource="#ClassificationLayer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RegionProposalNetwork</label>
+</Algorithm>
+
+<Task rdf:about="#ObjectDetection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ObjectDetection</label>
+</Task>
+
+<Parameter rdf:about="#Weights">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weights</label>
+</Parameter>
+
+<Algorithm rdf:about="#supervise_train">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supervise_train</label>
+</Algorithm>
+
+<Algorithm rdf:about="#unsupervise_train">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unsupervise_train</label>
+</Algorithm>
+
+<Task rdf:about="#Classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classification</label>
+</Task>
+
+<Task rdf:about="#Similarity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <canGetData rdf:resource="#unsupervise_train"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Similarity</label>
+</Task>
+
+<TaskInput rdf:about="#Byte_Pair_Encoding">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byte_Pair_Encoding</label>
+</TaskInput>
+
+<TaskInput rdf:about="#dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dataset</label>
+</TaskInput>
+
+<TaskInput rdf:about="#epochs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epochs</label>
+</TaskInput>
+
+<Feature rdf:about="#Normalization">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalization</label>
+</Feature>
+
+<TaskOutput rdf:about="#task">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task</label>
+</TaskOutput>
+
+<Parameter rdf:about="#Transformer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transformer</label>
+</Parameter>
+
+<Algorithm rdf:about="#KNN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KNN</label>
+</Algorithm>
+
+<Task rdf:about="#Classify_the_people_as_diabetic_patients_and_non-diabetic_patients">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classify_the_people_as_diabetic_patients_and_non-diabetic_patients</label>
+</Task>
+
+<TaskInput rdf:about="#KNN_Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KNN_Input</label>
+</TaskInput>
+
+<DataSet rdf:about="#iris">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iris</label>
+</DataSet>
+
+<DataSet rdf:about="#habermans-survival-data-set">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">habermans-survival-data-set</label>
+</DataSet>
+
+<Feature rdf:about="#KNN_Feature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KNN_Feature</label>
+</Feature>
+
+<TaskOutput rdf:about="#KNN_Output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KNN_Output</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#evaluation_metric_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluation_metric_2</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#evaluation_metric_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluation_metric_3</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#evaluation_metric_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluation_metric_4</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#evalution_metric_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evalution_metric_1</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#algorithm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">algorithm</label>
+</Parameter>
+
+<Parameter rdf:about="#n_neighbor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_neighbor</label>
+</Parameter>
+
+<Parameter rdf:about="#weights">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weights</label>
+</Parameter>
+
+<Limitation rdf:about="#KNN_Limitation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KNN_Limitation</label>
+</Limitation>
+
+<Algorithm rdf:about="#BBTT">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBTT</label>
+</Algorithm>
+
+<Algorithm rdf:about="#RTRL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTRL</label>
+</Algorithm>
+
+<Parameter rdf:about="#Wc">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wc</label>
+</Parameter>
+
+<Parameter rdf:about="#Wf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wf</label>
+</Parameter>
+
+<Parameter rdf:about="#Wi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wi</label>
+</Parameter>
+
+<Parameter rdf:about="#Wo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wo</label>
+</Parameter>
+
+<Layer rdf:about="#hiddenLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hiddenLayer</label>
+</Layer>
+
+<Layer rdf:about="#InputLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InputLayer</label>
+</Layer>
+
+<Layer rdf:about="#outputLayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outputLayer</label>
+</Layer>
+
+<TaskInput rdf:about="#input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">input</label>
+</TaskInput>
+
+<Feature rdf:about="#feature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature</label>
+</Feature>
+
+<TaskOutput rdf:about="#output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">output</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#evaluate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluate</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#parameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter</label>
+</Parameter>
+
+<Layer rdf:about="#layer_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer_1</label>
+</Layer>
+
+<Layer rdf:about="#layer_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer_2</label>
+</Layer>
+
+<Layer rdf:about="#layer_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer_3</label>
+</Layer>
+
+<Algorithm rdf:about="#1811.12808.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1811.12808.pdf</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Emession_Probability">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emession_Probability</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Hidden_Markov_Model">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hidden_Markov_Model</label>
+</Algorithm>
+
+<Algorithm rdf:about="#first_Operator">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first_Operator</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Part_Of_Speach_Tagging">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part_Of_Speach_Tagging</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Markov_Chain">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Markov_Chain</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Transition_Probability">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition_Probability</label>
+</Algorithm>
+
+<Algorithm rdf:about="#POS_evaluation_metric1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POS_evaluation_metric1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#POS_evaluation_metric2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POS_evaluation_metric2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#POS_evaluation_metric3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POS_evaluation_metric3</label>
+</Algorithm>
+
+<Algorithm rdf:about="#POS_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POS_input</label>
+</Algorithm>
+
+<Algorithm rdf:about="#chunking">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chunking</label>
+</Algorithm>
+
+<Algorithm rdf:about="#POSoutput">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POSoutput</label>
+</Algorithm>
+
+<Algorithm rdf:about="#secound_Operator">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secound_Operator</label>
+</Algorithm>
+
+<Algorithm rdf:about="#third_Operator">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">third_Operator</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Minimum_Covariance_Determinant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum_Covariance_Determinant</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Local_Outlier_Factor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local_Outlier_Factor</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Isolation_Forest">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isolation_Forest</label>
+</Algorithm>
+
+<Algorithm rdf:about="#eigenvalue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eigenvalue</label>
+</Algorithm>
+
+<Algorithm rdf:about="#One-Class_SVM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One-Class_SVM</label>
+</Algorithm>
+
+<Algorithm rdf:about="#009830049390090R">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">009830049390090R</label>
+</Algorithm>
+
+<Algorithm rdf:about="#softmax_regression">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">softmax_regression</label>
+</Algorithm>
+
+<Algorithm rdf:about="#svm.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">svm.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#tree.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tree.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.linear_model.LinearRegression.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <useOptimizer rdf:resource="#gradient-descent-for-machine-learning"/>
+  <useOptimizer rdf:resource="#NormalEquation.html"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.linear_model.LinearRegression.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.linear_model.LogisticRegression.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.linear_model.LogisticRegression.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.preprocessing.PolynomialFeatures.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.preprocessing.PolynomialFeatures.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.svm.SVR.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.svm.SVR.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.tree.DecisionTreeRegressor.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <useOptimizer rdf:resource="#classification-and-regression-trees-for-machine-learning"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.tree.DecisionTreeRegressor.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#svm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">svm</label>
+</Algorithm>
+
+<Algorithm rdf:about="#outlier_effict">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outlier_effict</label>
+</Algorithm>
+
+<Algorithm rdf:about="#w_components">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w_components</label>
+</Algorithm>
+
+<Algorithm rdf:about="#coefficients">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coefficients</label>
+</Algorithm>
+
+<Algorithm rdf:about="#b">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</label>
+</Algorithm>
+
+<Algorithm rdf:about="#w">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</label>
+</Algorithm>
+
+<Algorithm rdf:about="#diseases">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diseases</label>
+</Algorithm>
+
+<Algorithm rdf:about="#houses">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">houses</label>
+</Algorithm>
+
+<Algorithm rdf:about="#rainfalls">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rainfalls</label>
+</Algorithm>
+
+<Algorithm rdf:about="#time_series">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time_series</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cars">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cars</label>
+</Algorithm>
+
+<Algorithm rdf:about="#emails">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emails</label>
+</Algorithm>
+
+<Algorithm rdf:about="#images">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">images</label>
+</Algorithm>
+
+<Algorithm rdf:about="#texts">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">texts</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1Input</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2Input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2Input</label>
+</Algorithm>
+
+<Algorithm rdf:about="#any_numirical_dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any_numirical_dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#used-car-dataset-ford-and-mercedes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">used-car-dataset-ford-and-mercedes</label>
+</Algorithm>
+
+<Algorithm rdf:about="#bitcoin-tweets-20160101-to-20190329">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bitcoin-tweets-20160101-to-20190329</label>
+</Algorithm>
+
+<Algorithm rdf:about="#ocular-disease-recognition-odir5k">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocular-disease-recognition-odir5k</label>
+</Algorithm>
+
+<Algorithm rdf:about="#car-price">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">car-price</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sentiment-analysis-for-financial-news">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentiment-analysis-for-financial-news</label>
+</Algorithm>
+
+<Algorithm rdf:about="#melbourne-housing-market">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">melbourne-housing-market</label>
+</Algorithm>
+
+<Algorithm rdf:about="#imageai">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imageai</label>
+</Algorithm>
+
+<Algorithm rdf:about="#twitter-sentiment-analysis-hatred-speech">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">twitter-sentiment-analysis-hatred-speech</label>
+</Algorithm>
+
+<Algorithm rdf:about="#average-rainfall-and-temperature-in-uk20102019">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average-rainfall-and-temperature-in-uk20102019</label>
+</Algorithm>
+
+<Algorithm rdf:about="#used-cars-price-prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">used-cars-price-prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#email-spam-classification-dataset-csv">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email-spam-classification-dataset-csv</label>
+</Algorithm>
+
+<Algorithm rdf:about="#amazonreviews">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amazonreviews</label>
+</Algorithm>
+
+<Algorithm rdf:about="#shanghai-car-license-plate-auction-price">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanghai-car-license-plate-auction-price</label>
+</Algorithm>
+
+<Algorithm rdf:about="#price-volume-data-for-all-us-stocks-etfs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price-volume-data-for-all-us-stocks-etfs</label>
+</Algorithm>
+
+<Algorithm rdf:about="#california-housing-prices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">california-housing-prices</label>
+</Algorithm>
+
+<Algorithm rdf:about="#chronic-disease">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chronic-disease</label>
+</Algorithm>
+
+<Algorithm rdf:about="#boat-types-recognition">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boat-types-recognition</label>
+</Algorithm>
+
+<Algorithm rdf:about="#imdb-dataset-sentiment-analysis-in-csv-format">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imdb-dataset-sentiment-analysis-in-csv-format</label>
+</Algorithm>
+
+<Algorithm rdf:about="#twitter-and-reddit-sentimental-analysis-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">twitter-and-reddit-sentimental-analysis-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#heartdiseaseensembleclassifier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heartdiseaseensembleclassifier</label>
+</Algorithm>
+
+<Algorithm rdf:about="#nyse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nyse</label>
+</Algorithm>
+
+<Algorithm rdf:about="#parkinsons-disease-speech-signal-features">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parkinsons-disease-speech-signal-features</label>
+</Algorithm>
+
+<Algorithm rdf:about="#usa-cers-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa-cers-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#house-sales-prediction-and-classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house-sales-prediction-and-classification</label>
+</Algorithm>
+
+<Algorithm rdf:about="#car-evaluation-data-set">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">car-evaluation-data-set</label>
+</Algorithm>
+
+<Algorithm rdf:about="#car-price-prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">car-price-prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#rainfall-in-kerala-from-19012017">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rainfall-in-kerala-from-19012017</label>
+</Algorithm>
+
+<Algorithm rdf:about="#gamestop-historical-stock-prices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamestop-historical-stock-prices</label>
+</Algorithm>
+
+<Algorithm rdf:about="#email-spam-classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email-spam-classification</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stock-market-india">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock-market-india</label>
+</Algorithm>
+
+<Algorithm rdf:about="#property-sales">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property-sales</label>
+</Algorithm>
+
+<Algorithm rdf:about="#object-detection-for-ppe-covid19-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object-detection-for-ppe-covid19-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#twitter-sentiment-analysis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">twitter-sentiment-analysis</label>
+</Algorithm>
+
+<Algorithm rdf:about="#guns-object-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guns-object-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#disease-symptom-description-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease-symptom-description-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stock-market-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock-market-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#object-detection-obama">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object-detection-obama</label>
+</Algorithm>
+
+<Algorithm rdf:about="#heart-disease-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart-disease-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#852k-used-car-listings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">852k-used-car-listings</label>
+</Algorithm>
+
+<Algorithm rdf:about="#housing-in-london">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">housing-in-london</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sentiment140">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentiment140</label>
+</Algorithm>
+
+<Algorithm rdf:about="#datat3rr">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">datat3rr</label>
+</Algorithm>
+
+<Algorithm rdf:about="#simple-object-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple-object-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#shanghai-lane-house-rentals-2021">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanghai-lane-house-rentals-2021</label>
+</Algorithm>
+
+<Algorithm rdf:about="#weather-analysis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weather-analysis</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stock-exchange-data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock-exchange-data</label>
+</Algorithm>
+
+<Algorithm rdf:about="#fruit-images-for-object-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit-images-for-object-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#spam-email">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spam-email</label>
+</Algorithm>
+
+<Algorithm rdf:about="#arthropod-taxonomy-orders-object-detection-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arthropod-taxonomy-orders-object-detection-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#ontarioproperties">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontarioproperties</label>
+</Algorithm>
+
+<Algorithm rdf:about="#persian-spam-email">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">persian-spam-email</label>
+</Algorithm>
+
+<Algorithm rdf:about="#kerela-flood">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kerela-flood</label>
+</Algorithm>
+
+<Algorithm rdf:about="#email-spam-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email-spam-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#object-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sentiment-analysis-for-steam-reviews">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentiment-analysis-for-steam-reviews</label>
+</Algorithm>
+
+<Algorithm rdf:about="#rainfall-in-india">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rainfall-in-india</label>
+</Algorithm>
+
+<Algorithm rdf:about="#historical-rainfall-data-in-bangladesh">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">historical-rainfall-data-in-bangladesh</label>
+</Algorithm>
+
+<Algorithm rdf:about="#heart-disease-prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart-disease-prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#nifty50-stock-market-data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nifty50-stock-market-data</label>
+</Algorithm>
+
+<Algorithm rdf:about="#heart-disease-uci">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart-disease-uci</label>
+</Algorithm>
+
+<Algorithm rdf:about="#tesla-stock-price">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tesla-stock-price</label>
+</Algorithm>
+
+<Algorithm rdf:about="#brasilian-houses-to-rent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brasilian-houses-to-rent</label>
+</Algorithm>
+
+<Algorithm rdf:about="#housing-prices-in-metropolitan-areas-of-india">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">housing-prices-in-metropolitan-areas-of-india</label>
+</Algorithm>
+
+<Algorithm rdf:about="#lianjia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lianjia</label>
+</Algorithm>
+
+<Algorithm rdf:about="#used-cars-dataset-from-cardekhocom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">used-cars-dataset-from-cardekhocom</label>
+</Algorithm>
+
+<Algorithm rdf:about="#scmp2k19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scmp2k19</label>
+</Algorithm>
+
+<Algorithm rdf:about="#googlestockpricing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">googlestockpricing</label>
+</Algorithm>
+
+<Algorithm rdf:about="#belarus-used-cars-prices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belarus-used-cars-prices</label>
+</Algorithm>
+
+<Algorithm rdf:about="#spambase">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spambase</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sentimentdata">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentimentdata</label>
+</Algorithm>
+
+<Algorithm rdf:about="#indian-house-price-combined">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indian-house-price-combined</label>
+</Algorithm>
+
+<Algorithm rdf:about="#house-price-prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house-price-prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#car-object-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">car-object-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#spam-email-detection-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spam-email-detection-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cardiovascular-disease-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular-disease-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#houses-price-prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">houses-price-prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#kc-housesales-data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kc-housesales-data</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stock-time-series-20050101-to-20171231">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock-time-series-20050101-to-20171231</label>
+</Algorithm>
+
+<Algorithm rdf:about="#perth-temperatures-and-rainfall">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perth-temperatures-and-rainfall</label>
+</Algorithm>
+
+<Algorithm rdf:about="#spam-text-message-classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spam-text-message-classification</label>
+</Algorithm>
+
+<Algorithm rdf:about="#us-election-using-twitter-sentiment-analysis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">us-election-using-twitter-sentiment-analysis</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stock-markettweets-lexicon-data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock-markettweets-lexicon-data</label>
+</Algorithm>
+
+<Algorithm rdf:about="#email-msg-spam-detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email-msg-spam-detection</label>
+</Algorithm>
+
+<Algorithm rdf:about="#ham-and-spam-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ham-and-spam-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sentiment-analysis-on-financial-tweets">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentiment-analysis-on-financial-tweets</label>
+</Algorithm>
+
+<Algorithm rdf:about="#enron-email-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enron-email-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#stockmarket-sentiment-dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stockmarket-sentiment-dataset</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cardiovascular-disease">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular-disease</label>
+</Algorithm>
+
+<Algorithm rdf:about="#rainfallsorocaba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rainfallsorocaba</label>
+</Algorithm>
+
+<Algorithm rdf:about="#rainfall-in-pakistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rainfall-in-pakistan</label>
+</Algorithm>
+
+<Algorithm rdf:about="#pca_components">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pca_components</label>
+</Algorithm>
+
+<Algorithm rdf:about="#class_probabilty">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class_probabilty</label>
+</Algorithm>
+
+<Algorithm rdf:about="#numeric_values">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numeric_values</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1Output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1Output</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2Ouput">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2Ouput</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cumulative_variaance">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cumulative_variaance</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.accuracy_score.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.accuracy_score.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.auc.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.auc.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.f1_score.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.f1_score.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.precision_score.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.precision_score.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.recall_score.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.recall_score.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1EvaluationMetricAccuracy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1EvaluationMetricAccuracy</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1EvaluationMetricF1Score">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1EvaluationMetricF1Score</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1EvaluationMetricPrecision">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1EvaluationMetricPrecision</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task1EvaluationMetricRecall">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1EvaluationMetricRecall</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2EvaluationMetricAccuracy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2EvaluationMetricAccuracy</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2EvaluationMetricF1Score">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2EvaluationMetricF1Score</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2EvaluationMetricPrecision">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2EvaluationMetricPrecision</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Task2EvaluationMetricRecall">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2EvaluationMetricRecall</label>
+</Algorithm>
+
+<Algorithm rdf:about="#find_w_component">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">find_w_component</label>
+</Algorithm>
+
+<Algorithm rdf:about="#get_linear_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get_linear_prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#get_logistic_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get_logistic_prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#get_softmax_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get_softmax_prediction</label>
+</Algorithm>
+
+<Algorithm rdf:about="#hyper-plane">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyper-plane</label>
+</Algorithm>
+
+<Algorithm rdf:about="#margin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">margin</label>
+</Algorithm>
+
+<Algorithm rdf:about="#maximize-margin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maximize-margin</label>
+</Algorithm>
+
+<Algorithm rdf:about="#c">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</label>
+</Algorithm>
+
+<Algorithm rdf:about="#fit_intercept">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fit_intercept</label>
+</Algorithm>
+
+<Algorithm rdf:about="#l1_ratio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l1_ratio</label>
+</Algorithm>
+
+<Algorithm rdf:about="#max_iter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max_iter</label>
+</Algorithm>
+
+<Algorithm rdf:about="#n_jobs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_jobs</label>
+</Algorithm>
+
+<Algorithm rdf:about="#normalize">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normalize</label>
+</Algorithm>
+
+<Algorithm rdf:about="#penalty">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penalty</label>
+</Algorithm>
+
+<Algorithm rdf:about="#solver">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solver</label>
+</Algorithm>
+
+<Algorithm rdf:about="#tolerence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tolerence</label>
+</Algorithm>
+
+<Algorithm rdf:about="#degree">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degree</label>
+</Algorithm>
+
+<Algorithm rdf:about="#gamma">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma</label>
+</Algorithm>
+
+<Algorithm rdf:about="#kernel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel</label>
+</Algorithm>
+
+<Algorithm rdf:about="#classification-and-regression-trees-for-machine-learning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#OptimizationAlgorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classification-and-regression-trees-for-machine-learning</label>
+</Algorithm>
+
+<Algorithm rdf:about="#gradient-descent-for-machine-learning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#OptimizationAlgorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gradient-descent-for-machine-learning</label>
+</Algorithm>
+
+<Algorithm rdf:about="#NormalEquation.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#OptimizationAlgorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NormalEquation.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#root_mean_square_error">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">root_mean_square_error</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.mean_absolute_error.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.mean_absolute_error.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.metrics.mean_squared_error.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.metrics.mean_squared_error.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#logistic_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">logistic_layer</label>
+</Algorithm>
+
+<Algorithm rdf:about="#softmax-layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">softmax-layer</label>
+</Algorithm>
+
+<Algorithm rdf:about="#polynomial_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polynomial_layer</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.linear_model.ElasticNet.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.linear_model.ElasticNet.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.linear_model.Lasso.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.linear_model.Lasso.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sklearn.linear_model.Ridge.html">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sklearn.linear_model.Ridge.html</label>
+</Algorithm>
+
+<Algorithm rdf:about="#sigmoid-function">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sigmoid-function</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cart_regression_cost_function">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cart_regression_cost_function</label>
+</Algorithm>
+
+<Algorithm rdf:about="#ml-logistic-cost-func_derivative">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ml-logistic-cost-func_derivative</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cost-function-logistic-regression">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cost-function-logistic-regression</label>
+</Algorithm>
+
+<Task rdf:about="#BinaryClassification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BinaryClassification</label>
+</Task>
+
+<Task rdf:about="#MLP_BankNoteTask">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MLP_BankNoteTask</label>
+</Task>
+
+<Task rdf:about="#Task1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task1</label>
+</Task>
+
+<Task rdf:about="#Task2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task2</label>
+</Task>
+
+<Task rdf:about="#binary_classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binary_classification</label>
+</Task>
+
+<Task rdf:about="#multi_class_classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multi_class_classification</label>
+</Task>
+
+<Task rdf:about="#values_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">values_prediction</label>
+</Task>
+
+<Task rdf:about="#car_price_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">car_price_prediction</label>
+</Task>
+
+<Task rdf:about="#disease_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_prediction</label>
+</Task>
+
+<Task rdf:about="#email_spam_ham">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email_spam_ham</label>
+</Task>
+
+<Task rdf:about="#image_segmentation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">image_segmentation</label>
+</Task>
+
+<Task rdf:about="#object_detection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object_detection</label>
+</Task>
+
+<Task rdf:about="#predicting_rainfall_for_the_year">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predicting_rainfall_for_the_year</label>
+</Task>
+
+<Task rdf:about="#real_estate_value_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real_estate_value_prediction</label>
+</Task>
+
+<Task rdf:about="#sentiment_analysis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sentiment_analysis</label>
+</Task>
+
+<Task rdf:about="#stock_market_prediction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stock_market_prediction</label>
+</Task>
+
+<TaskInput rdf:about="#any_dataset_feachers">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any_dataset_feachers</label>
+</TaskInput>
+
+<Algorithm rdf:about="#RandomForest">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RandomForest</label>
+</Algorithm>
+
+<Task rdf:about="#classification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classification</label>
+</Task>
+
+<Task rdf:about="#regression">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regression</label>
+</Task>
+
+<TaskInput rdf:about="#inputEmailClassification">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inputEmailClassification</label>
+</TaskInput>
+
+<DataSet rdf:about="#onlineNewsPopularity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onlineNewsPopularity</label>
+</DataSet>
+
+<DataSet rdf:about="#emailSpamClassificationDatasetCSV">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emailSpamClassificationDatasetCSV</label>
+</DataSet>
+
+<TaskOutput rdf:about="#classOutput">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classOutput</label>
+</TaskOutput>
+
+<TaskOutput rdf:about="#numericOutput">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numericOutput</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#EntropyFunction">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EntropyFunction</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#MissclassificationError">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MissclassificationError</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#accuracy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accuracy</label>
+</EvaluationMatric>
+
+<EvaluationMatric rdf:about="#meanSquaredError">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meanSquaredError</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#categoricalParameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categoricalParameter</label>
+</Parameter>
+
+<Parameter rdf:about="#numericalParameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numericalParameter</label>
+</Parameter>
+
+<Algorithm rdf:about="#Algorithmname">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithmname</label>
+</Algorithm>
+
+<Algorithm rdf:about="#is-supervised">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is-supervised</label>
+</Algorithm>
+
+<Algorithm rdf:about="#synoname1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synoname1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#problem">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</label>
+</Algorithm>
+
+<Algorithm rdf:about="#parameter-description">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter-description</label>
+</Algorithm>
+
+<Algorithm rdf:about="#parameter-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter-type</label>
+</Algorithm>
+
+<Algorithm rdf:about="#layar1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layar1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#layer-formula">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer-formula</label>
+</Algorithm>
+
+<Algorithm rdf:about="#layer2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#layer3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer3</label>
+</Algorithm>
+
+<Algorithm rdf:about="#layer4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer4</label>
+</Algorithm>
+
+<Algorithm rdf:about="#dataset-name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dataset-name</label>
+</Algorithm>
+
+<Algorithm rdf:about="#optimization">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optimization</label>
+</Algorithm>
+
+<Algorithm rdf:about="#optimizationf-formula">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optimizationf-formula</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step3</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step4</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step5</label>
+</Algorithm>
+
+<Algorithm rdf:about="#step6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">step6</label>
+</Algorithm>
+
+<Algorithm rdf:about="#task-name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task-name</label>
+</Algorithm>
+
+<Algorithm rdf:about="#task-sample">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task-sample</label>
+</Algorithm>
+
+<Algorithm rdf:about="#task-summary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task-summary</label>
+</Algorithm>
+
+<Algorithm rdf:about="#task-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Task"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task-type</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Hyperparameter-description">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperparameter-description</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Hyperparameter-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperparameter-type</label>
+</Algorithm>
+
+<Algorithm rdf:about="#function-formula">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function-formula</label>
+</Algorithm>
+
+<Algorithm rdf:about="#function-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function-type</label>
+</Algorithm>
+
+<Task rdf:about="#task-output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task-output</label>
+</Task>
+
+<Task rdf:about="#feature-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature-type</label>
+</Task>
+
+<Task rdf:about="#evaluation-type">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluation-type</label>
+</Task>
+
+<Task rdf:about="#isSota">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSota</label>
+</Task>
+
+<EvaluationMatric rdf:about="#evaluationMetric">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluationMetric</label>
+</EvaluationMatric>
+
+<Algorithm rdf:about="#Unet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasHyperParameter rdf:resource="#Unet_momentum"/>
+  <hasHyperParameter rdf:resource="#Unet_kernel_size"/>
+  <hasHyperParameter rdf:resource="#Unet_initializer"/>
+  <hasHyperParameter rdf:resource="#Unet_BS"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet</label>
+</Algorithm>
+
+<HyperParameter rdf:about="#Unet_BS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_BS</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#Unet_initializer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_initializer</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#Unet_kernel_size">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_kernel_size</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#Unet_momentum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_momentum</label>
+</HyperParameter>
+
+<Algorithm rdf:about="#VGG">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VGG</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasHyperParameter rdf:resource="#resnet_momentum"/>
+  <hasHyperParameter rdf:resource="#resnet_BN"/>
+  <hasHyperParameter rdf:resource="#resnet_BS"/>
+  <hasHyperParameter rdf:resource="#resnet_WD"/>
+  <hasHyperParameter rdf:resource="#resnet_LR"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet</label>
+</Algorithm>
+
+<HyperParameter rdf:about="#resnet_BN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_BN</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#resnet_BS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_BS</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#resnet_LR">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_LR</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#resnet_WD">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_WD</label>
+</HyperParameter>
+
+<HyperParameter rdf:about="#resnet_momentum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Algorithm"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_momentum</label>
+</HyperParameter>
+
+<Algorithm rdf:about="#Unet_limitation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_limitation</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_limitation1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_limitation1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_limitation2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Limitation"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_limitation2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_parameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_parameter</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_parameter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Parameter"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_parameter</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator3</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator4</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator5</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_operator6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_operator6</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_layer1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_layer1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_layer2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_layer2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_layer1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_layer1</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_layer2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_layer2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_layer3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_layer3</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_function">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_function</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_function2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_function2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_function">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_function</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_function2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_function2</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_optimaizer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_optimaizer</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_optimaizer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_optimaizer</label>
+</Algorithm>
+
+<Algorithm rdf:about="#Unet_connections">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_connections</label>
+</Algorithm>
+
+<Algorithm rdf:about="#resnet_layerConnection">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Layer"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_layerConnection</label>
+</Algorithm>
+
+<Task rdf:about="#Unet_task">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_task</label>
+</Task>
+
+<Task rdf:about="#resnet_task">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_task</label>
+</Task>
+
+<Task rdf:about="#Unet_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_input</label>
+</Task>
+
+<Task rdf:about="#resnet_input">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_input</label>
+</Task>
+
+<Task rdf:about="#Unet_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_output</label>
+</Task>
+
+<Task rdf:about="#resnet_output">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_output</label>
+</Task>
+
+<Task rdf:about="#Unet_feature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_feature</label>
+</Task>
+
+<Task rdf:about="#resnet_input_feature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#Feature"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_input_feature</label>
+</Task>
+
+<Task rdf:about="#Unet_dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_dataset</label>
+</Task>
+
+<Task rdf:about="#resnet_Dataset">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskInput"/>
+  <rdf:type rdf:resource="#DataSet"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_Dataset</label>
+</Task>
+
+<Task rdf:about="#Unet_eval1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_eval1</label>
+</Task>
+
+<Task rdf:about="#Unet_eval2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_eval2</label>
+</Task>
+
+<Task rdf:about="#Unet_eval3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_eval3</label>
+</Task>
+
+<Task rdf:about="#Unet_eval4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unet_eval4</label>
+</Task>
+
+<Task rdf:about="#resnet_eval1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_eval1</label>
+</Task>
+
+<Task rdf:about="#resnet_eval2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#TaskOutput"/>
+  <rdf:type rdf:resource="#EvaluationMatric"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resnet_eval2</label>
+</Task>
+
+<Algorithm rdf:about="#GRU">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRU</label>
+</Algorithm>
+
+<Algorithm rdf:about="#RNN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNN</label>
+</Algorithm>
+
+<Task rdf:about="#ImageCaption">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImageCaption</label>
+</Task>
+
+<Task rdf:about="#Summarization">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summarization</label>
+</Task>
+
+<TaskInput rdf:about="#ImageCaptionInput">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImageCaptionInput</label>
+</TaskInput>
+
+<DataSet rdf:about="#home">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home</label>
+</DataSet>
+
+<DataSet rdf:about="#pn_summary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pn_summary</label>
+</DataSet>
+
+<Feature rdf:about="#CaptionFeature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CaptionFeature</label>
+</Feature>
+
+<TaskOutput rdf:about="#Caption">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caption</label>
+</TaskOutput>
+
+<EvaluationMatric rdf:about="#BleuScore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BleuScore</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#ResetGate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ResetGate</label>
+</Parameter>
+
+<Parameter rdf:about="#UpdateGate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UpdateGate</label>
+</Parameter>
+
+<Parameter rdf:about="#Gate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gate</label>
+</Parameter>
+
+<Limitation rdf:about="#LowConvergence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LowConvergence</label>
+</Limitation>
+
+<Layer rdf:about="#Dense">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dense</label>
+</Layer>
+
+<Algorithm rdf:about="#Yolo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yolo</label>
+</Algorithm>
+
+<Algorithm rdf:about="#cnn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cnn</label>
+</Algorithm>
+
+<Algorithm rdf:about="#1506.02640.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1506.02640.pdf</label>
+</Algorithm>
+
+<DataSet rdf:about="#pascal-voc-2007">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pascal-voc-2007</label>
+</DataSet>
+
+<EvaluationMatric rdf:about="#evaluationmetric">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluationmetric</label>
+</EvaluationMatric>
+
+<Parameter rdf:about="#parameter1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter1</label>
+</Parameter>
+
+<Parameter rdf:about="#parameter2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter2</label>
+</Parameter>
+
+<Parameter rdf:about="#parameter3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameter3</label>
+</Parameter>
+
+<Layer rdf:about="#first_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first_layer</label>
+</Layer>
+
+<Layer rdf:about="#second_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">second_layer</label>
+</Layer>
+
+<Layer rdf:about="#third_layer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">third_layer</label>
+</Layer>
+
+
+</rdf:RDF>
