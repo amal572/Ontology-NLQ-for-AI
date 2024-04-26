@@ -1,17 +1,17 @@
-# Data_mining_project
-We have written an algorithm to standardize different ontologies according to the structure provided by the subject teacher this ontology have a lot of XML file continue of the name of the AI algorithm and its relation to it, then searching this ontology using natural language by converting it to SPARQL language.
+# Data Mining Project
 
-<li>we loop for all ontology class names and then use the Fuzzy set to find If the names are the same or not then replace this names to the name find in the unified structure and use the same way for the name of the relation and for subclass </li>
+This project focuses on developing an algorithm to standardize different ontologies according to the structure provided by the subject teacher. The ontologies consist of multiple XML files, each containing the name of an AI algorithm and its relation to it. The primary objective is to enable efficient searching within these ontologies using natural language queries, which are then converted into SPARQL language for querying.
 
-<li>then for search, we use a dependency tree to find the subject, object, and relation from the natural language to use it in SPARQL language for simple query
-and try to solve some complex queries to find some relation in the relation from the dependency tree, like the sentence "what is the hyperparameter of mlp and function of it" we find the word "hyperparameter" and "function" related to mlp algorithm and this the subject and hyperparameter is the first relation and function is the second relation so we can find the answer for this type of question. </li>
+## Approach
 
-<h2> used libraries </h2>
-<li> spacy </li>
-<li> owlready2 </li>
-<li> sklearn </li>
-<li> fuzzywuzzy </li>
-<li> numpy </li>
+1. **Standardization of Ontologies:** We start by iterating through all ontology class names and apply fuzzy set matching to determine if the names match or not. If discrepancies are found, we replace them with the corresponding names found in the unified structure. This process is also applied to the names of relations and subclasses.
 
+2. **Natural Language Searching:** For searching within the ontology, we utilize a dependency tree to extract the subject, object, and relation from natural language queries. These elements are then used to construct SPARQL queries for simple searches. Additionally, we handle more complex queries by identifying relationships from the dependency tree. For instance, in the query "What is the hyperparameter of mlp and function of it," we identify "hyperparameter" and "function" as related to the "mlp" algorithm, with "hyperparameter" representing the first relation and "function" representing the second relation.
 
+## Used Libraries
 
+- **Spacy:** Used for natural language processing and dependency parsing.
+- **Owlready2:** Used for ontology manipulation and querying.
+- **Scikit-learn:** Utilized for fuzzy set matching and other machine learning tasks.
+- **Fuzzywuzzy:** Specifically used for fuzzy string matching.
+- **NumPy:** Used for numerical operations and array manipulations.
