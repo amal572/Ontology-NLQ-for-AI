@@ -1,4 +1,4 @@
-# Data Mining Project
+# Ontology NLQ for AI - Data Mining Project
 
 This project focuses on developing an algorithm to standardize different ontologies according to the structure provided by the subject teacher. The ontologies consist of multiple XML files, each containing the name of an AI algorithm and its relation to it. The primary objective is to enable efficient searching within these ontologies using natural language queries, which are then converted into SPARQL language for querying.
 
